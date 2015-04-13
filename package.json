@@ -1,0 +1,16 @@
+
+
+{
+"name":"write-to-mongo",
+"private":"true",
+"version":"0.0.1",
+"description":"simple node.js app to write to a mongo db",
+"scripts":{
+        "start":"node write.js"
+},
+"dependencies":{
+"mongodb":"1.4.35"
+}
+}
+
+
