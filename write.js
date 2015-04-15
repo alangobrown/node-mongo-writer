@@ -6,7 +6,11 @@
  
 var currentDate = new Date();
 
+//For testing outside of a container
 MongoClient.connect('mongodb://46.101.46.152:27017/test', function(err, db) {
+
+//For docker where the link is alised as mongolink
+MongoClient.connect('mongodb://' + 'mongolink' + '/test', function(err, db) {
     if(err) throw err;
  
     var collection = db.collection('test_insert');
