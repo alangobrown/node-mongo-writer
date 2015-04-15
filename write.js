@@ -10,7 +10,7 @@ var currentDate = new Date();
 //MongoClient.connect('mongodb://46.101.46.152:27017/test', function(err, db) {
 
 //For docker where the link is alised as mongolink
-MongoClient.connect('mongodb://' + 'mongolink' + '/test', function(err, db) {
+MongoClient.connect('mongodb://' + 'mongolink' + ':' + process.env.MONGOLINK_PORT_5672_TCP_PORT + '/test', function(err, db) {
     if(err) throw err;
  
     var collection = db.collection('test_insert');
